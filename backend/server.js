@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import bookRoutes from "./routes/books.js";
@@ -24,24 +25,28 @@ app.use("/api/books", bookRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/categories", categoryRoutes);
 
-/* MongoDB connection */
-mongoose.connect(
-  process.env.MONGO_URL,
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  () => {
-    console.log("MONGODB CONNECTED");
+/* MongoDB connection using async/await */
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("✅ MONGODB CONNECTED");
+  } catch (error) {
+    console.error("❌ MongoDB connection failed:", error.message);
+    process.exit(1);
   }
-);
+};
 
+connectDB();
+
+/* Root Route */
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to LibraryApp");
 });
 
-/* Port Listening In */
+/* Start Server */
 app.listen(port, () => {
-  console.log(`Server is running in PORT ${port}`);
+  console.log(`🚀 Server is running on PORT ${port}`);
 });

@@ -14,24 +14,23 @@ function Footer() {
                     <div className="contact-details">
                         <h1>Contact Us</h1>
                         <p>Librarian</p>
-                        <p>Government School</p>
-                        <p>Visakhapatnam-530041</p>
+                        <p>SRKR Engineering college</p>
+                        <p>Bhimavaram</p>
                         <p>Andhra Pradesh</p>
                         <p>India</p>
-                        <p><b>Email:</b>example@gmail.com</p>
+                        <p><b>Email:</b>siddu@gmail.com</p>
                     </div>
                     <div className='usefull-links'>
                         <h1>Usefull Links</h1>
-                        <a href='#home'>Link-1</a>
-                        <a href='#home'>Link-1</a>
-                        <a href='#home'>Link-1</a>
-                        <a href='#home'>Link-1</a>
+                        <a href='#home'>Home</a>
+                        <a href='#home'>Contact as</a>
+                        <a href='#home'>Help</a>
                     </div>
                     <div className='librarian-details'>
                         <h1>Librarian</h1>
-                        <p>Name</p>
+                        <p>CHANDRA SIDDHARDHA</p>
                         <p>Education</p>
-                        <p>Contact: +91 9123456787</p>
+                        <p>Contact: +919123456787</p>
                     </div>
                 </div>
                 <div className="contact-social" >
@@ -42,7 +41,7 @@ function Footer() {
                 </div>
             </div>
             <div className='copyright-details'>
-                <p className='footer-copyright'>&#169; 2020 copyright all right reserved<br /><span>Designed with ❤️ by Pranavdhar Reddy</span></p>
+                <p className='footer-copyright'>&#169; 2025 copyright all right reserved<br /><span>Designed with ❤️ by Krovvidi Chandra Siddhardha </span></p>
             </div>
         </div>
     )
