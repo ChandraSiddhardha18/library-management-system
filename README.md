@@ -22,5 +22,5 @@ This is a **Full Stack MERN (MongoDB, Express, React, Node.js)** application.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/kondapallianuhya/MERNPROJECT.git
+git clone https://github.com/ChandraSiddhardha18/library-management-system.git
 ```
